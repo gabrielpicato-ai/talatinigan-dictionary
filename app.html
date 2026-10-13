@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Talatinigan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html" aria-label="Talatinigan home">
+      <img src="assets/light.svg" alt="" class="brand-mark brand-mark-light">
+      <img src="assets/dark.svg" alt="" class="brand-mark brand-mark-dark">
+      <span><b>TALATINIGAN</b><small>THE ENGLISH DICTIONARY</small></span>
+    </a>
+    <nav aria-label="Main">
+      <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="t-icon">☀</span><i></i><span class="t-icon">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dictionary View -->
+    <section id="v-dictionary" data-v>
+      <div class="hero">
+        <h1>Find the right words.</h1>
+        <p>Clear definitions. Natural examples. A little more understanding every day.</p>
+      </div>
+
+      <form class="search" id="form" role="search" autocomplete="off">
+        <div class="sbox">
+          <input id="q" type="text" placeholder="Search any English word (e.g. hello, serendipity)..." aria-label="Search word" autocapitalize="off" spellcheck="false">
+          <button class="go" id="go" aria-label="Search" type="submit">Search</button>
+        </div>
+      </form>
+
+      <div class="try">
+        <div class="eyebrow">Try a word</div>
+        <button class="chip" data-w="programming">programming</button>
+        <button class="chip" data-w="debugging">debugging</button>
+        <button class="chip" data-w="information">information</button>
+        <button class="chip" data-w="technology">technology</button>
+      </div>
+
+      <div class="grid">
+        <div id="main-card"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Talatinigan home">
+          <img src="assets/light.svg" alt="" class="brand-mark brand-mark-light">
+          <img src="assets/dark.svg" alt="" class="brand-mark brand-mark-dark">
+          <span class="footer-brand-text">
+            <strong>TALATINIGAN</strong>
+            <small>THE ENGLISH DICTIONARY</small>
+          </span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <p class="footer-description">
+          A thoughtful space for discovering words, meanings,
+          and the ideas behind them.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 All rights reserved.</p>
+      <p>Made for the love of words.</p>
+    </div>
+  </footer>
+<!-- Dictionary View -->
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
