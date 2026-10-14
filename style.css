@@ -524,3 +524,88 @@ ol.defs .n {
   gap: 16px;
 }
 
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--r-pill);
+  background: var(--btn);
+  color: var(--btn-t);
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.danger {
+  background: none;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.btn.ghost {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink-c);
+}
+
+.icon-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  color: var(--ink-c);
+}
+
+.icon-btn.saved {
+  border-color: var(--brass);
+  color: var(--brass-t);
+  font-weight: 500;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.mini {
+  padding: 18px;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  background: var(--card);
+}
+
+.mini:hover {
+  border-color: var(--brass);
+}
+
+.mini h3 {
+  font: 400 22px var(--serif);
+  margin-bottom: 4px;
+}
+
+.mini p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.headrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* ===== Footer ===== */
