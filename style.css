@@ -184,3 +184,51 @@ html[data-theme="dark"] .toggle i:after {
   background: var(--night);
 }
 
+/* Main */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px 23dvh;
+}
+
+.hero {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.hero h1 {
+  font: 400 clamp(40px, 6vw, 68px)/1.1 var(--serif);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass-t);
+  margin-bottom: 12px;
+}
+
+.eyebrow:before, .eyebrow:after {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--brass);
+}
+
+.left .eyebrow {
+  justify-content: flex-start;
+}
+.left .eyebrow:before {
+  display: none;
+}
+
