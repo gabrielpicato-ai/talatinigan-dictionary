@@ -232,3 +232,75 @@ main {
   display: none;
 }
 
+/* Search */
+.search {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.sbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px 6px 20px;
+  background: var(--card);
+  border: 1px solid var(--brass);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow);
+}
+
+.sbox input {
+  flex: 1;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: 0;
+  padding: 8px 0;
+}
+
+.sbox input::placeholder {
+  color: var(--muted);
+}
+
+.go {
+  padding: 10px 22px;
+  border-radius: var(--r-pill);
+  background: var(--brass);
+  color: #fff;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.go:hover {
+  opacity: 0.9;
+}
+
+.try {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.try .eyebrow {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.chip {
+  padding: 6px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  font-size: 14px;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--brass);
+  color: var(--ink-c);
+}
+
