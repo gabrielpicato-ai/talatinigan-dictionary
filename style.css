@@ -715,4 +715,5 @@ ol.defs .n {
 
 .source-link a { 
   color: var(--brass-t); 
+  text-decoration: none; 
 }
