@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Talatinigan English dictionary application.">
   <title>Talatinigan — Dictionary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="index.html" aria-label="Back to Talatinigan portfolio">
+    <a class="brand" href="index.html" aria-label="Talatinigan home">
       <img src="assets/light.svg" alt="" class="brand-mark brand-mark-light">
       <img src="assets/dark.svg" alt="" class="brand-mark brand-mark-dark">
-      <span><b>TALATINIGAN</b><small>THE ENGLISH DICTIONARY</small></span>
+      <span><b>TALATINIGAN</b></span>
     </a>
     <div class="header-actions">
-      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">◐ Theme</button>
-      <a class="btn ghost" href="index.html">Portfolio</a>
+      <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="t-icon">☀</span><i></i><span class="t-icon">☾</span>
+      </button>
+      <a class="btn ghost" href="index.html">About</a>
     </div>
   </header>
 
-  <main class="app-main">
-    <section class="hero app-hero">
-      <div class="eyebrow">Dictionary application</div>
-      <h1>What word are you looking for?</h1>
-      <p>Search an English word to view definitions and other available dictionary details.</p>
-    </section>
-
-    <form class="search" id="search-form" novalidate>
-      <label class="sr-only" for="word-input">English word</label>
-      <div class="sbox">
-        <input id="word-input" name="word" type="text" autocomplete="off" spellcheck="false" placeholder="Type a word, e.g. serendipity">
-        <button class="go" type="submit">Search</button>
+  <main>
+    <!-- Dictionary View -->
+    <section id="v-dictionary" data-v>
+      <div class="hero">
+        <h1>Find the right words.</h1>
+        <p>Search an English word to view definitions and other available dictionary details.</p>
       </div>
-    </form>
 
-    <div class="try" aria-label="Example searches">
-      <div class="eyebrow">Try a word</div>
-      <button class="chip example-word" type="button">hello</button>
-      <button class="chip example-word" type="button">learn</button>
-      <button class="chip example-word" type="button">beautiful</button>
-      <button class="chip example-word" type="button">computer</button>
-    </div>
+      <form class="search" id="form" role="search" autocomplete="off">
+        <div class="sbox">
+          <input id="q" type="text" placeholder="Search any English word (e.g. hello, serendipity)..." aria-label="Search word" autocapitalize="off" spellcheck="false">
+          <button class="go" id="go" aria-label="Search" type="submit">Search</button>
+        </div>
+      </form>
 
-    <section id="status" class="status-message" aria-live="polite"></section>
-    <section id="main-card" aria-live="polite">
-      <div class="card empty-state">
-        <div class="lbl">Ready</div>
-        <h2>Search for your first word.</h2>
-        <p>Definitions and other available details from the API will appear here.</p>
+      <div class="try">
+        <button class="chip" data-w="programming">programming</button>
+        <button class="chip" data-w="debugging">debugging</button>
+        <button class="chip" data-w="information">information</button>
+        <button class="chip" data-w="technology">technology</button>
+      </div>
+
+      <div class="grid">
+        <div id="main-card">
+          <div class="card empty-state">
+            <h2>Search for your first word.</h2>
+            <p>Definitions and other available details from the API will appear here.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <span>Talatinigan · IT 110 Midterm Project</span>
-      <a href="https://freedictionaryapi.com/api/v1" target="_blank" rel="noopener">Free Dictionary API documentation ↗</a>
+      <span>Copyright © 2026 Talatinigan Dictionary Group</span>
+      <span>Midterm Project</span>
     </div>
   </footer>
-
+  
+<!-- Dictionary gabriel View -->
+  <div class="toast" id="toast" role="status"></div>
   <script src="script.js"></script>
 </body>
 </html>
