@@ -8,26 +8,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-  <header class="top">
     <a class="brand" href="index.html" aria-label="Back to Talatinigan portfolio">
       <img src="assets/light.svg" alt="" class="brand-mark brand-mark-light">
       <img src="assets/dark.svg" alt="" class="brand-mark brand-mark-dark">
       <span><b>TALATINIGAN</b></span>
     </a>
     <div class="header-actions">
+`
       <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
         <span class="t-icon">☀</span><i></i><span class="t-icon">☾</span>
       </button>
       <a class="btn ghost" href="index.html">About</a>
     </div>
   </header>
-  
+
   <main class="app-main">
     <section class="hero app-hero">
-      <div class="eyebrow">Dictionary application</div>
       <h1>What word are you looking for?</h1>
       <p>Search an English word to view definitions and other available dictionary details.</p>
     </section>
@@ -39,21 +38,21 @@
         <button class="go" type="submit">Search</button>
       </div>
     </form>
-    <div class="try">
-      <button class="chip" data-w="programming">programming</button>
-      <button class="chip" data-w="debugging">debugging</button>
-      <button class="chip" data-w="information">information</button>
-      <button class="chip" data-w="technology">technology</button>
-    </div>
-
-    <div class="grid">
-      <div id="main-card">
-        <div class="card empty-state">
-          <h2>Search for your first word.</h2>
-          <p>Definitions and other available details from the API will appear here.</p>
-        </div>
+      <div class="try">
+        <button class="chip" data-w="programming">programming</button>
+        <button class="chip" data-w="debugging">debugging</button>
+        <button class="chip" data-w="information">information</button>
+        <button class="chip" data-w="technology">technology</button>
       </div>
-    </div>
+
+      <div class="grid">
+        <div id="main-card">
+          <div class="card empty-state">
+            <h2>Search for your first word.</h2>
+            <p>Definitions and other available details from the API will appear here.</p>
+          </div>
+        </div>
+    <section id="status" class="status-message" aria-live="polite"></section>
   </main>
 
   <footer class="site-footer">
