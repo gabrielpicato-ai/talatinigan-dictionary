@@ -72,6 +72,9 @@ button {
 
 /* Header */
 .top {
+  background: var(--bg);
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -631,7 +634,7 @@ a {
 }
 
 .portfolio-main .card h3 {
-  font: 400 24px/1.25 var(--);
+  font: 400 24px/1.25 var(--serif);
   margin-bottom: 6px;
 }
 
@@ -663,7 +666,7 @@ a {
 
 .team-photo {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
   overflow: hidden;
   background: var(--bg2);
 }
@@ -691,7 +694,7 @@ a {
 }
 
 .team-info h3 {
-  font: 500 24px/1.25 var(--sans);
+  font: 400 clamp(10px, 4vw, 26px)/1.15 var(--serif);
   margin-bottom: 9px;
 }
 
